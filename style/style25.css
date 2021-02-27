@@ -1,0 +1,417 @@
+html, body, div, span, article, header, footer, nav,
+h1, h2, h3, h4, h5, h6, p{	
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	background-image: url(../images/bg_body.png);
+	width:100%;
+	}
+@font-face {
+    font-family: "chunkfive";
+    src: url("../fonts/Chunkfive.otf");
+}
+#maincontainer {
+	background-image: url(../images/bg_gamearea.jpg);
+	position: relative;	
+	margin: 0px auto;
+	padding:0px;
+	width: 85%;
+	max-width: 1200px;
+	min-height:700px;
+	color:black;
+	overflow:hidden;
+	}
+#maincontainer>#main_head {		
+
+	color: red;
+	text-align:center;
+}
+#maincontainer>#main_head h5 {	
+	font-size: 55px;	
+	font-family: "chunkfive";
+	padding-top:20px;
+	padding-left:0px;	
+}
+#mainnav {
+	margin-right: 30px;	
+}
+#mainnav ul {   
+	text-align: center;
+}
+#mainnav ul li{	
+	display: inline-block;
+	margin: 10px 10px;	
+}
+#mainnav ul li #mnav_1{	     /*the following navigation buttons have absolute width and height. I opted to rearrange the contents of the page when needed rather than stretching and shrinking the background images of the buttons*/    
+	width: 110px;
+	height: 80px;
+	background-image: url(../images/mnav_1.jpg);
+	background-size: 110px 80px;    	
+	border: 3px solid orange;
+	border-radius: 8px;
+}
+#mainnav ul li #mnav_2{
+	width: 110px;
+	height: 80px;	
+	background-image: url(../images/mnav_2.jpg);
+	background-size: 110px 80px;    
+	border: 3px solid orange;
+	 border-radius: 8px; 
+	  -webkit-animation: opac 1s infinite;
+}
+#mainnav ul li #mnav_3{
+	width: 110px;
+	height: 80px;	
+	background-image: url(../images/mnav_3.jpg);
+	background-size: 110px 80px;    
+	border: 3px solid orange;
+	 border-radius: 8px;
+}
+#contgame{
+	
+	white-space: nowrap;	
+}
+#left_nav {
+	width:31%;
+	display:inline-block;
+	margin:0 auto;
+	vertical-align: top;
+}
+#left_nav #numbers{	
+text-align:center;
+	background-image: url(../images/numbers.jpg);
+	width:200px;
+	height: 70px;
+	background-size: 200px 70px;
+background-position:center;    
+	border: 3px solid orange;
+	 border-radius: 8px;
+	 margin-left:auto;
+	margin-right: auto;	 
+}
+#left_nav #num1{	
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	background-image: url(../images/6.png);
+	width:50px;
+	height: 50px;
+	background-size: 50px 50px;    
+	border: 3px solid orange;
+	 border-radius: 8px;	 
+}
+#left_nav #num2{
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	background-image: url(../images/6.png);	
+	width:50px;
+	height: 50px;
+	background-size: 50px 50px;
+border: 3px solid orange;
+ border-radius: 8px;
+}
+#left_nav #num3{	
+display:block;
+	background-image: url(../images/9.png);
+	margin-left:auto;
+	margin-right: auto;
+	width:50px;
+	height: 50px;
+	background-size: 50px 50px;    
+	border: 3px solid orange;
+	 border-radius: 8px;	
+}
+#left_nav #newdraw{	
+	background-image: url(../images/newdraw.png);	
+	margin-left:auto;
+	margin-right: auto;
+	width:200px;
+	height: 70px;
+	background-size: 200px 70px;    
+	border: 3px solid orange;
+	 border-radius: 8px;	 
+}
+#gamearea5x5{
+	width: 38%;
+	min-width:300px;
+		display:inline-block;
+	margin:auto;
+	vertical-align:top;	
+  white-space: normal;
+	
+	overflow:hidden;
+	text-align: center;	   
+  animation-duration: 2s;
+  animation-name: bounceInUp;	
+}
+
+/*The following webkit keyframes code was taken from 
+https://github.com/daneden/animate.css/blob/master/animate.css,
+courtesy of Daniel Eden */
+
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);  }}
+.row1, .row2, .row3, .row4, .row5 {	
+		display:inline-block;
+	 height: 0;
+    padding-bottom: 15%;
+    width: 15%;	
+	margin: 0%;	
+	background-size: 100%;
+	text-align: center;
+	border: 3px solid orange;
+	border-radius: 10px;
+	transition: all 0.2s ease-in-out;	
+}
+#startgame {
+	display: block;
+	margin: auto;
+	background-image: url(../images/startgame.png);
+	width:150px;
+	height: 60px;
+	background-size: 150px 60px;
+	border: 3px solid orange;
+}
+#ga5r11{	background-image: url(../images/6.png);}
+#ga5r11:hover{	background-image: url(../images/s6.png);}
+#ga5r12{	background-image: url(../images/3.png);}
+#ga5r12:hover{	background-image: url(../images/s3.png);}
+#ga5r13{	background-image: url(../images/5.png);}
+#ga5r13:hover{	background-image: url(../images/s5.png);}
+#ga5r14{	background-image: url(../images/2.png);	}
+#ga5r14:hover{	background-image: url(../images/s2.png);}
+#ga5r15{	background-image: url(../images/2.png);}
+#ga5r15:hover{	background-image: url(../images/s2.png);}
+#ga5r21{	background-image: url(../images/9.png);}
+#ga5r21:hover{	background-image: url(../images/s9.png);}
+#ga5r22{	background-image: url(../images/5.png);
+}#ga5r22:hover{	background-image: url(../images/s5.png);}
+#ga5r23{	background-image: url(../images/7.png);}
+#ga5r23:hover{	background-image: url(../images/s7.png);}
+#ga5r24{	background-image: url(../images/8.png);}
+#ga5r24:hover{	background-image: url(../images/s8.png);}
+#ga5r25{	background-image: url(../images/8.png);}
+#ga5r25:hover{	background-image: url(../images/s8.png);
+}#ga5r31{	background-image: url(../images/6.png);
+}#ga5r31:hover{	background-image: url(../images/s6.png);}
+#ga5r32{	background-image: url(../images/3.png);}
+#ga5r32:hover{	background-image: url(../images/s3.png);}
+#ga5r33{	background-image: url(../images/1.png);}
+#ga5r33:hover{	background-image: url(../images/s1.png);}
+#ga5r34{	background-image: url(../images/2.png);}
+#ga5r34:hover{	background-image: url(../images/s2.png);}
+#ga5r35{	background-image: url(../images/2.png);}
+#ga5r35:hover{	background-image: url(../images/s2.png);}
+#ga5r41{	background-image: url(../images/8.png);}
+#ga5r41:hover{	background-image: url(../images/s8.png);}
+#ga5r42{	background-image: url(../images/3.png);}
+#ga5r42:hover{	background-image: url(../images/s3.png);}
+#ga5r43{	background-image: url(../images/5.png);}
+#ga5r43:hover{	background-image: url(../images/s5.png);}
+#ga5r44{	background-image: url(../images/4.png);}
+#ga5r44:hover{	background-image: url(../images/s4.png);}
+#ga5r45{	background-image: url(../images/4.png);}
+#ga5r45:hover{	background-image: url(../images/s4.png);}
+#ga5r51{	background-image: url(../images/8.png);}
+#ga5r51:hover{	background-image: url(../images/s8.png);}
+#ga5r52{	background-image: url(../images/3.png);
+}#ga5r52:hover{	background-image: url(../images/s3.png);}
+#ga5r53{	background-image: url(../images/5.png);}
+#ga5r53:hover{	background-image: url(../images/s5.png);}
+#ga5r54{	background-image: url(../images/4.png);}
+#ga5r54:hover{	background-image: url(../images/s4.png);}
+#ga5r55{	background-image: url(../images/4.png);}
+#ga5r55:hover{	background-image: url(../images/s4.png);}
+#right_nav {	
+	display:inline-block;	
+	width: 31%;
+	margin:auto;	
+	vertical-align: top;
+	overflow:hidden;
+	border-radius: 8px;	
+	text-align: center;	
+	white-space: nowrap;}
+#right_nav #scores{		
+	background-image: url(../images/scores.jpg);
+	width:200px;
+	height: 70px;
+	margin-left:auto;
+	margin-right: auto;
+	background-size: 200px 70px;
+    text-align: center;	
+	border: 3px solid orange;
+	border-radius: 8px;	
+}
+#right_nav #scoreval{	
+	margin-left:auto;
+	margin-right: auto;
+	font-size: 32px;
+	padding-top: 15px;	
+	width:200px;
+	height: 50px;		
+	border: 3px solid orange;
+	border-radius: 8px;		
+}
+#right_nav #newboard{	
+	margin-left:auto;
+	margin-right: auto;	
+	background-image: url(../images/newboard.png);
+	width:200px;
+	height: 60px;	
+	background-size: 200px 60px;  	
+	border: 3px solid orange;
+	border-radius: 8px;
+	}
+#footer_main {	
+	display:block;	
+	width: 325px;
+	height: 60px;
+	margin:auto;
+	width:100%;
+	background-image: url(../images/bg_body.png);
+	color: black;
+	text-align: center;	
+	padding-top:30px;
+	background-repeat: x-fast;
+   -webkit-animation: opac2 2s;	
+}
+@-webkit-keyframes opac {
+  0%   { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+@media only screen and (min-width:580px) and (max-width:900px) { 
+#left_nav {				
+	text-align:center;
+	width: 100%;	
+	animation-duration: 0.5s;
+	animation-name: zoomInLeft;		
+}
+#left_nav #numbers{	
+	display: inline-block;
+	background-image: url(../images/numbers.jpg);
+	width:150px;	
+	background-size: 150px 70px;  	
+}
+#left_nav #num1, #left_nav #num2,#left_nav #num3{	
+	display:inline-block;		
+}
+
+#left_nav #newdraw{	
+	background-image: url(../images/newdraw.png);
+	DISPLAY: inline-block;	
+	width:150px;	
+	background-size: 150px 70px;  	 
+}
+#gamearea5x5{
+	display:block;		
+	margin:auto;	
+	vertical-align: center;	
+	animation-duration: 2s;
+}	
+#right_nav {	
+	display:block;	
+	width: 100%;
+	height:60px;	
+}
+#right_nav #scores,#right_nav #newboard {	
+	display:inline-block;
+	width:125px;
+	height: 50px;
+	vertical-align:top;
+	background-size: 125px 50px;	
+}
+#right_nav #scoreval{
+	display:inline-block;	
+	vertical-align:top;	
+	width:125px;
+	height:45px;
+	padding-top: 5px;	
+			
+}
+#maincontainer {	
+	width: 90%;	
+}}
+@media only screen and (max-width:580px) { 
+#contgame{
+	height: 830px;	
+}	
+	#left_nav {
+	display:block;	
+	clear:both;
+	text-align:center;
+	width: 250px;
+	height: auto;		
+	
+animation-duration: 0.5s;
+animation-name: zoomInLeft;		
+}
+#left_nav #num1,#left_nav #num2,#left_nav #num3{	
+	display:inline-block;		 
+}
+#gamearea5x5{
+	display:block;
+	width: 7%;
+	min-width:250px;
+}		
+#right_nav {	
+	display:block;
+	width: 250px;
+}
+#footer_main {		
+	height: 60px;
+	width: 100%;
+}
+#mainnav {	
+	height: 100px;
+}
+#mainnav ul {  	
+		text-align: center;
+		margin-right:40px;
+		white-space: nowrap;
+	}
+#mainnav ul li{	
+	display: inline-block;
+	width:50px;	
+	text-align:left;	
+}
+#mainnav ul li #mnav_1,#mainnav ul li #mnav_2,#mainnav ul li #mnav_3{	 
+   display:inline-block;   
+	vertical-align: top;
+	width:140%;
+	background-size: 100% 100%;
+}
+#maincontainer {
+	position: relative;	
+	margin: 0px auto;
+	padding:0px;
+	width: 100%;
+	height: 1100px;
+	color:black;
+	background-image: url(../images/bg_gamearea.jpg);	
+} }
